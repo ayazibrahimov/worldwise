@@ -1,0 +1,18 @@
+.nav{
+  background-color: orangered;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav :global(.active){
+    color: red;
+    /* font-size: 46px; */
+}
+/* .test{
+    color: blue;
+    font-size: 46px;
+} */
