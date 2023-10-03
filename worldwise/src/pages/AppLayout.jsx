@@ -4,8 +4,9 @@ import PageNav from "../components/PageNav"
 function AppLayout() {
   return (
     <div>
-        <PageNav></PageNav>
-        AppLayout</div>
+        <PageNav />
+        <p>App</p>
+        </div>
   )
 }
 
