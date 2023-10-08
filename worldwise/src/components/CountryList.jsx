@@ -1,14 +1,37 @@
+import CountyrItem from './CountryItem'
+import Spinner from './Spinner'
+import Message from './Message'
+import styles from './CountryList.module.css'
 
-// import CountryItem from './CountryItem'
+function CountryList({ cities,isLoading }) {
+  
+ if(isLoading) return <Spinner />
 
-// function CountryList( {country} ) {
-//   return (
-//     <div>
-//         <ul>
-//             <CountryItem country={props.country} />
-//         </ul>
-//     </div>
-//   )
-// }
+ 
+ if(cities.length === 0) return <Message message='Data zad yoxdu' />
 
-// export default CountryList
+
+
+ let countries = cities.reduce((arr,cur)=>{
+     if(!arr.map(data=>data.country).includes(cur.country)){
+        return [...arr, {country:cur.country, emoji:cur.emoji}]
+     }else return arr;
+ }, [])
+
+
+
+
+
+
+  return (
+    <ul className={styles.countryList}>
+         {
+            countries.map((country,index)=>(
+                <CountyrItem country={country} key={index} />
+            ))
+         }
+    </ul>
+  );
+}
+
+export default CountryList;
