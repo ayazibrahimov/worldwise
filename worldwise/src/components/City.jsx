@@ -1,4 +1,5 @@
-// import styles from "./City.module.css";
+import { useParams, useSearchParams } from "react-router-dom";
+import styles from "./City.module.css";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -18,11 +19,15 @@ function City() {
   };
 
  
-
+  const x =  useParams()
 
   
+  const [data,setData] = useSearchParams()
 
-  console.log(x);
+
+  const lat = data.get('lat')
+  const lng = data.get('lng')
+
 
   return (
     // <div className={styles.city}>
@@ -60,8 +65,12 @@ function City() {
     //     <ButtonBack />
     //   </div>
     // </div>
-
-
+ 
+    <div className={styles.city}>
+      id:{x.id}
+      <span>Lat:{lat}</span>
+      <span>Lng:{lng}</span>
+    </div>
 
   );
 }
