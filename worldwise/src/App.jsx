@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import AppLayout from './pages/AppLayout';
 import CityList from './components/CityList';
 import City from './components/City';
+import Form from './components/Form';
 import CountryList from './components/CountryList';
 
 
@@ -57,7 +58,7 @@ function App() {
                 <Route path='city' element={<CityList cities={cities} isLoading={isLoading}/>} ></Route>
                 <Route path="city/:id" element={<City />}></Route>
                 <Route path='country' element={<CountryList cities={cities} isLoading={isLoading} />}></Route>
-                <Route path='form' element={<p>Form</p>}></Route>
+                <Route path='form' element={<Form />}></Route>
             </Route>
             <Route path='*' element={<Error />}> </Route>
           </Routes>
