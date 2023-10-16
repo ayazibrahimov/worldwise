@@ -2,8 +2,14 @@ import CountyrItem from './CountryItem'
 import Spinner from './Spinner'
 import Message from './Message'
 import styles from './CountryList.module.css'
+import { useContext } from 'react'
+import { DataProvider } from '../contexts/DataContext'
 
-function CountryList({ cities,isLoading }) {
+function CountryList() {
+
+
+  const { cities,isLoading } = useContext(DataProvider)
+
   
  if(isLoading) return <Spinner />
 
