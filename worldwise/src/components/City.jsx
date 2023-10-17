@@ -28,6 +28,7 @@ function City() {
   const lat = data.get('lat')
   const lng = data.get('lng')
 
+  const {cityName, emoji, date, id, position} = currentCity
 
   return (
     // <div className={styles.city}>
