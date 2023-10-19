@@ -29,7 +29,7 @@ function App() {
             <Route path='product' element={<Product />}></Route>
             <Route path='/login' element={<Login />}></Route>
             <Route path='/app' element={<AppLayout />}>
-                <Route index element={<Navigate to='city' replace />} ></Route>
+                <Route index element={<Navigate to='city' replace />}></Route>
                 <Route path='city' element={<CityList />} ></Route>
                 <Route path="city/:id" element={<City />}></Route>
                 <Route path='country' element={<CountryList />}></Route>
