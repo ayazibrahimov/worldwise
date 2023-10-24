@@ -52,11 +52,6 @@ function DataWrapper({ children }){
       setIsLoading(false)
      }
 
-
-   
-
-
-
   }
 
 
